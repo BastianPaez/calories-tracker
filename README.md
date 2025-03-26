@@ -79,9 +79,13 @@ export class CalorieCardComponent {
 ````
 ##¿Qué aprendí? ❤️
 ✅ Reactive Forms: Ahora sé cómo manipular formularios de manera efectiva, gestionando datos y validaciones.
+
 ✅ Inputs y Outputs: Reforcé el uso de input() y output(), logrando encadenar múltiples output() para enviar información hasta el servicio.
+
 ✅ Effects y Signals: Implementé un effect para llenar el formulario al editar un elemento y utilicé un signal de estado true/false para indicar si debía crear o editar un registro.
+
 ✅ Computed Properties: Usé computed() para calcular dinámicamente el saldo de calorías consumidas y quemadas.
+
 
 📌 Conclusión:
 Este proyecto fue un excelente desafío para mejorar mis habilidades en Angular. Es ideal para cualquier persona que esté aprendiendo un framework, ya que combina formularios reactivos, comunicación entre componentes y manejo de estado con Signals. 💡
