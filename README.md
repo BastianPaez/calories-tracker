@@ -1,59 +1,55 @@
-# CalorieTracjer
+# Calories Tracker 📜
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Bienvenido a este proyecto construido con Angular+17, donde aplico el uso de Reactive Forms para mantener la lógica del formulario y atrapar los errores.
 
-## Development server
+## Proyecto ☕️
 
-To start a local development server, run:
+Este proyecto me ayudo bastante a consolidar mis conocimientos básicos de angular, la idea de este la obtuve de un curso previo de react que realice y como ahora estoy aprendiendo Angular, decidi poner en práctica lo que he aprendido realizando el proyecto desde 0 con este framework
 
-```bash
-ng serve
+## Visita la página web 🎉
+
+Puedes visitar la página desde [este link](calories-tracker-bastian.netlify.app)
+
+
+# Detalles Generales🔥
+
+
+## Estructura de carpetas 📁
+Dentro de SRC no tuve la necesidad de desglozar el app en mas carpetas ya que solo era una aplicacion de una sola página, entonces lo hice en el directorio principal manteniendo el orden correpondiente separando pages, interfaces, componentes, etc.
+![image](https://github.com/user-attachments/assets/29ea5605-1a27-4d7e-b240-fc0304e59e90)
+
+
+## [Reactive Form](./) 📋
+El reactive form me permitió manipular de forma sencilla el formulario, gracias a esto pude implementar las validaciones que vienen por defecto con el form builder e implementar errores dinámicos depeniendo el caso. 
+```
+  myForm : FormGroup = this.fb.group({
+    name: ['', Validators.required],
+    calories: [0, [Validators.required, Validators.min(0)]],
+    type:['food', Validators.required]
+  })
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Service 📂⬅
+Dentro de mi archivo service mantuve gran parte de la lógica que hay detrás de la aplicación web.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+-Cree y guardé el localStorage de forma dinámica, almacenando los datos con un signal y sincronizando a través de un effect.
+```
+const loadLocalStorage = () => {
+  const history = localStorage.getItem('history')
+  return history ? JSON.parse(history) : []
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
+  saveLocalStorage = effect(() =>
+    localStorage.setItem('history', JSON.stringify(this.history()))
+)
 ```
+-
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Aprenda programação ❤️
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este repositório é um projeto gratuito para a comunidade de desenvolvedores, mas você pode me ajudar comprando o meu curso "**[FrontCode](https://iuricode.com/frontcode)**" se estiver interessado em aprender ou melhorar suas habilidades na programação. A sua compra me ajuda a produzir e fornecer mais conteúdo gratuito para a comunidade. Adquira agora e comece sua jornada na programação.
+# calories-tracker
