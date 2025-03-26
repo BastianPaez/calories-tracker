@@ -1,0 +1,84 @@
+<div class="bg-base-200 w-4xl border border-base-300 p-4 rounded-box mx-auto">
+  <form class="space-y-3" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="flex gap-2">
+      <p class="text-2xl text-end w-1/6">Insert food:</p>
+      <div class="w-full">
+        <input type="text" placeholder="Example: apple, snack bar, beer " class="input text-2xl w-full"
+          formControlName="name"
+          (keydown)="markUntouched('name')"
+          />
+
+        @if (isValidField('name')) {
+          <app-error
+            [error]="myForm.controls['name'].errors!"
+          />
+        }
+      </div>
+
+    </div>
+    <div class="flex gap-2">
+      <p class="text-2xl text-end w-1/6">Calories:</p>
+      <div class="w-full">
+        <input type="number" placeholder="Example: 600, 200, 100" class="input text-2xl w-full"
+        formControlName="calories"
+        (keydown)="markUntouched('calories')"
+        />
+        @if (isValidField('calories')) {
+          <app-error
+            [error]="myForm.controls['calories'].errors!"
+          />
+        }
+      </div>
+
+    </div>
+    <div class="grid grid-cols-2 border">
+      <div class="text-center">
+        <p>Food</p>
+        <input type="radio" value="food" formControlName="type">
+      </div>
+      <div class="text-center">
+        <p>Activity</p>
+        <input type="radio" value="activity" formControlName="type">
+      </div>
+      @if (isValidField('type')) {
+        <div class="text-center col-span-2">
+          <app-error
+          [error]="myForm.controls['track'].errors!"
+        />
+        </div>
+
+      }
+    </div>
+
+    <button type="submit" class="btn btn-primary text-xl mx-auto block"
+      [class.btn-primary]="myForm.controls['type'].value === 'food'"
+      [class.btn-secondary]="myForm.controls['type'].value === 'activity'"
+    >
+    @if ( isEdit()) {
+      Save Edit
+    }@else {
+      @if (myForm.controls['type'].value === 'food') {
+        Save Food
+      } @else {
+        Save Activity
+      }
+    }
+
+    </button>
+
+  </form>
+</div>
+
+<!--
+<div>
+  valid:
+  {{myForm.valid | json}}
+  <br>
+  {{myForm.value | json}}
+  <br>
+  {{myForm.controls['name'].errors |json}}
+  <br>
+  {{myForm.controls['calories'].errors |json}}
+  <br>
+  {{myForm.controls['type'].errors |json}}
+</div> -->

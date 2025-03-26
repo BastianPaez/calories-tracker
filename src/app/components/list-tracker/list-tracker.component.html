@@ -1,0 +1,16 @@
+<section class="bg-neutral rounded-2xl shadow grid grid-cols-1 space-y-10 py-5">
+  @if (history().length === 0) {
+    <h2 class="text-4xl text-center font-bold">No entries</h2>
+  }@else {
+    <h2 class="text-4xl text-center font-bold">History</h2>
+    @for (item of history(); track item.id) {
+      <calorie-card
+        [entrie]="item"
+        (editId)="editId.emit($event)"
+        (deleteId)="deleteId.emit($event)"
+      />
+    }
+  }
+
+
+</section>

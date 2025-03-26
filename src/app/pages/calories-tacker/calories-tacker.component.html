@@ -1,0 +1,26 @@
+<form-tracker
+  [history] = "caloriesService.history()"
+  (value)="caloriesService.setNewHistory($event)"
+  [activeEdit]="caloriesService.activeID()"
+  [isEdit]="caloriesService.isEdit()"
+  (valueEdited)="caloriesService.getEditedItem($event)"
+/>
+
+<div class="divider">
+</div>
+
+<calories-resume
+  [foodCalories]="caloriesService.foodCalories()"
+  [activityCalories]="caloriesService.activityCalories()"
+
+/>
+
+<div class="divider">
+</div>
+
+
+<list-tracker
+  [history]="caloriesService.history()"
+  (editId)="caloriesService.pasteItem($event)"
+  (deleteId)="caloriesService.deleteItem($event)"
+/>
