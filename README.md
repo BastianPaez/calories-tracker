@@ -5,7 +5,7 @@
 ##Español
 
 # Calories Tracker 📜
-Bienvenido a este proyecto construido con Angular 17, donde aplico el uso de Reactive Forms para manejar la lógica del formulario y gestionar errores.
+Bienvenido a este proyecto construido con Angular 17+, donde aplico el uso de Reactive Forms para manejar la lógica del formulario y gestionar errores.
 
 ## Proyecto ☕️
 Este proyecto me ayudó bastante a consolidar mis conocimientos básicos de Angular. La idea surgió a partir de un curso previo de React que realicé. Como ahora estoy aprendiendo Angular, decidí poner en práctica lo que he aprendido creando este CRUD desde cero con este framework.
