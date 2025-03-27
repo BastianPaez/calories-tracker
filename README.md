@@ -1,9 +1,8 @@
+[![Ir a la sección en Inglés](https://img.shields.io/badge/Readme%20en%20Inglés-blue)](#english)
 
-[![README EN ESPAÑOL](https://img.shields.io/badge/Ir%20a%20Sección%20Objetivo-blue)](#Español)
-[![README IN ENGLISH](https://img.shields.io/badge/Ir%20a%20Sección%20Objetivo-red)](#English)
+[![Ir a la sección en Español](https://img.shields.io/badge/Readme%20en%20Español-blue)](#español)
 
-
-#English
+##English
 
 # Calories Tracker 📜
 Welcome to this proyect builded with Angular 17+, here i apply Reactive Forms to manipulate the logic of formularies and catching his errors.
@@ -100,7 +99,7 @@ export class CalorieCardComponent {
 This proyect is a excelent challenge to improve my skills in Angular. I recommend this proyect for anyone that interested to learn Angular or any Frontend Framework.💡
 
 
-#Español
+##Español
 
 # Calories Tracker 📜
 Bienvenido a este proyecto construido con Angular 17, donde aplico el uso de Reactive Forms para manejar la lógica del formulario y gestionar errores.
