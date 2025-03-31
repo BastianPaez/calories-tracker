@@ -2,7 +2,7 @@
 
 
 
-##Español
+## Español
 
 # Calories Tracker 📜
 Bienvenido a este proyecto construido con Angular 17+, donde aplico el uso de Reactive Forms para manejar la lógica del formulario y gestionar errores.
